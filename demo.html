@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DND</title>
+    <script type="text/javascript" src="../../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="pz_drag.js"></script>
+  </head>
+  <body style="height:1500px;">
+    <style type="text/css">
+      #box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #f0c;
+      }
+      #handle {
+        height: 40px;
+        background: #c09;
+      }
+      #range {
+        margin: 50px;
+        background: #fcc;
+        width: 500px;
+        height: 500px;
+      }
+      #box1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        left: 600px;
+        background: #c96;
+      }
+    </style>
+
+    <div id="box1">没有限制范围，默认为document</div>
+
+    <div id="range"><div id="box">限制范围</div></div>
+    <script>
+      var drag1 = new PZ_DND({
+        handle: $('#box1')
+      });
+      var drag = new PZ_DND({
+        handle: $('#box'),
+        range: $('#range')
+      });
+    </script>
+  </body>
+</html>
